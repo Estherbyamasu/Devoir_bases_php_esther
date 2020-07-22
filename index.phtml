@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>les bases de php</title>
+</head>
+<body>
+<?php
+//les variables
+
+$nom=" Esther";
+$prenom="Furaha ";
+$age= 35;
+$var1=true;
+$var2=false;
+$nbr1=12;
+$nbr2=48;
+
+echo $nom . ' penom ' . $prenom . 'age ' . $age .'<br>';
+
+//les operations arithmetique
+$add=$nbr1 + $nbr2;
+$sub=$nbr2 - $nbr1;
+$div= $nbr2 / $nbr1;
+$mod=$nbr2 % $nbr1;
+
+
+echo $add;
+echo $sub;
+echo $div;
+echo $mod;
+
+
+//booleens
+if($var1==true and $var2==true)
+{
+    echo "faux" ;
+}
+else{
+    echo "vraie";
+}
+
+//les conditions
+if($age<20 and $nom=='esther')
+{
+    echo "vous n'avez pas cet age";
+}
+else{
+    echo "oui";
+}
+switch($age){
+    case 0 :
+        echo " vous etes esther";
+    case 2 :
+        echo " vous n'etes esther";
+     case 3 :
+         echo " vous etes trompe";  
+  default :
+       echo "je n'ai pas des commentaires sur ca";         
+}
+//les boucles
+while($age<=40)
+{
+    echo "ceci est:" .$age . '<br>';
+    $age++;
+}
+
+ do{
+    echo "ceci est:" .$age . '<br>';
+    $age++;
+}
+while($age<=40);
+
+for($age=35;$age<=40;$age++)
+{
+    echo "est son age:" . $age . '<br>';
+}
+
+//les tableaux
+
+$nom=array('esther','furaha','justine');
+$nom[0]='esther';
+$nom[1]='furaha';
+$nom[2]='justine';
+for($e=0;$e=3;$e++)
+{
+    echo $nom[$e]. '<br>';
+}
+$prenom=array('clemence','florence','eustase');
+$prenom[0]='clemence';
+$prenom[1]='florence';
+$prenom[2]='eustase';
+for($d=0;$d=3;$d++)
+{
+    echo $prenom[$d]. '<br>';
+}
+$age=array('56','20','30');
+$age['esther']=56;
+$age['furaha']=20;
+$age['justine']=30;
+
+foreach($age as $values)
+{
+    echo $values. '<br>';
+}
+//les fonction
+echo strlen("bonjour"). '<br>';
+echo str_word_count("bonjour",0,à). '<br>';
+
+
+print_r(array_key($nom));
+
+if($prenom==30)
+{
+ echo "prenom trouvee";
+}else{
+    echo "prenom non trouvee";
+}
+
+print_r(array_values($age));
+
+function bonjour()
+{
+    echo "bonjour a tous".'<br>';
+}
+bonjour();
+
+function bonjourprenom($prenom)
+{
+    echo "bonjour ". $prenom .'<br>';
+}
+bonjourprenom('eustase');
+?>
+</body>
+</html>
